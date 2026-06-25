@@ -17,22 +17,27 @@ startBtn.onclick = () => {
 
 /* Hitung umur (lahir 27 Juni 2006) */
 function updateTimer() {
-    const birthDate = new Date("2006-06-27");
-    const now = new Date();
+    const birthday = new Date("June 27, 2026 00:00:00").getTime();
 
-    let age = now.getFullYear() - birthDate.getFullYear();
+    setInterval(function () {
+        const now = new Date().getTime();
+        const distance = birthday - now;
 
-    const birthdayThisYear = new Date(
-        now.getFullYear(),
-        birthDate.getMonth(),
-        birthDate.getDate()
-    );
+        if (distance <= 0) {
+            timer.innerHTML = "🎂 Selamat Ulang Tahun ke-20 🎉";
+            return;
+        }
 
-    if (now < birthdayThisYear) {
-        age--;
-    }
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
 
-    timer.innerHTML = "🎂 Selamat Ulang Tahun ke-" + age + " 🎉";
+        timer.innerHTML =
+            `🎂 ${days} hari ${hours} jam lagi menuju ulang tahun ke-20 🎉`;
+
+    }, 1000);
 }
 
 updateTimer();
