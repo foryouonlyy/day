@@ -92,23 +92,29 @@ h1{
 .cream1{
     position:absolute;
     width:100%;
-    height:35px;
+    height:38px;
     top:0;
-    background:#fff;
+    background:linear-gradient(#ffffff,#f3f3f3);
     border-radius:25px 25px 0 0;
-}
+    box-shadow:
+        inset 0 -3px 5px rgba(0,0,0,.08),
+        0 2px 5px rgba(255,255,255,.5);
+    }
 
 /* Krim atas */
 .cream2{
     position:absolute;
     width:250px;
-    height:25px;
+    height:30px;
     left:50%;
     top:-55px;
     transform:translateX(-50%);
-    background:#fff;
+    background:linear-gradient(#ffffff,#f3f3f3);
     border-radius:20px 20px 0 0;
-}
+    box-shadow:
+        inset 0 -3px 5px rgba(0,0,0,.08),
+        0 2px 5px rgba(255,255,255,.5);
+    }
 
 /* Ceri */
 .cherry{
