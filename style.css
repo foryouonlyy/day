@@ -1,0 +1,270 @@
+body{
+    margin:0;
+    padding:0;
+    background:radial-gradient(circle at top,#2a0a4a,#000);
+    color:white;
+    text-align:center;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+.container{
+    margin-top:50px;
+}
+
+h1{
+    margin-top:30px;
+}
+
+#photo{
+    width:250px;
+    border-radius:20px;
+    margin-top:20px;
+    box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+
+#timer{
+    font-size:25px;
+    margin-top:25px;
+}
+
+/* Layar pembuka */
+#startScreen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+#startBtn{
+    padding:20px 35px;
+    font-size:22px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+/* Tombol */
+#btnUcapan,
+#blowBtn{
+    padding:12px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ff4fa3;
+    color:white;
+    font-size:18px;
+    margin:15px;
+    cursor:pointer;
+}
+
+#ucapan{
+    font-size:20px;
+    min-height:35px;
+    margin-top:20px;
+}
+
+/* ===== KUE ===== */
+
+.cake{
+    position:relative;
+    width:320px;
+    height:140px;
+    margin:180px auto 30px;
+    background:linear-gradient(to bottom,#ffb4d4,#ff7eb6);
+    border-radius:22px;
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.35),
+        inset 0 -15px 20px rgba(0,0,0,.15);
+}
+
+/* Tingkat atas */
+.top-layer{
+    position:absolute;
+    width:220px;
+    height:90px;
+    left:50%;
+    transform:translateX(-50%);
+    top:-90px;
+    background:linear-gradient(to bottom,#ffd1e5,#ff9fc8);
+    border-radius:20px;
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.2),
+        inset 0 -10px 15px rgba(0,0,0,.1);
+}
+
+/* Krim bawah */
+.cream1{
+    position:absolute;
+    width:100%;
+    height:35px;
+    top:0;
+    border-radius:22px 22px 0 0;
+    background:
+        radial-gradient(circle at 20px 20px,#fff 18px,transparent 19px),
+        radial-gradient(circle at 60px 20px,#fff 18px,transparent 19px),
+        radial-gradient(circle at 100px 20px,#fff 18px,transparent 19px),
+        radial-gradient(circle at 140px 20px,#fff 18px,transparent 19px),
+        radial-gradient(circle at 180px 20px,#fff 18px,transparent 19px),
+        radial-gradient(circle at 220px 20px,#fff 18px,transparent 19px),
+        radial-gradient(circle at 260px 20px,#fff 18px,transparent 19px),
+        radial-gradient(circle at 300px 20px,#fff 18px,transparent 19px),
+        #fff;
+}
+
+/* Krim atas */
+.cream2{
+    position:absolute;
+    width:220px;
+    height:30px;
+    left:50%;
+    transform:translateX(-50%);
+    top:-90px;
+    border-radius:20px 20px 0 0;
+    background:
+        radial-gradient(circle at 20px 15px,#fff 15px,transparent 16px),
+        radial-gradient(circle at 60px 15px,#fff 15px,transparent 16px),
+        radial-gradient(circle at 100px 15px,#fff 15px,transparent 16px),
+        radial-gradient(circle at 140px 15px,#fff 15px,transparent 16px),
+        radial-gradient(circle at 180px 15px,#fff 15px,transparent 16px),
+        #fff;
+}
+
+/* Ceri */
+.cherry{
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:#ff2d55;
+    border-radius:50%;
+    z-index:5;
+    box-shadow:inset -3px -3px 5px rgba(0,0,0,.2);
+}
+
+.c1{
+    top:-20px;
+    left:75px;
+}
+
+.c2{
+    top:-65px;
+    left:150px;
+}
+
+.c3{
+    top:-20px;
+    right:75px;
+}
+
+/* Lilin angka */
+.number-candle{
+    position:absolute;
+    top:-165px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:0;
+    z-index:10;
+}
+
+.num{
+    font-size:65px;
+    font-weight:bold;
+    color:#ff4fa3;
+    line-height:1;
+    text-shadow:
+        0 0 10px #ff8acb,
+        0 0 20px #ff8acb;
+    position:relative;
+}
+
+/* Api */
+.flame{
+    position:absolute;
+    width:18px;
+    height:28px;
+    left:50%;
+    top:-28px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle,#fff7a0,#ffb300,#ff6600);
+    border-radius:50% 50% 20% 20%;
+    box-shadow:0 0 20px orange;
+    animation:api .5s infinite alternate;
+}
+
+@keyframes api{
+    from{
+        transform:translateX(-50%) scale(1);
+    }
+    to{
+        transform:translateX(-50%) scale(1.15);
+    }
+}
+
+/* Bintang */
+.star{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{
+        opacity:.2;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* Balon */
+.balloon{
+    position:fixed;
+    bottom:-120px;
+    width:60px;
+    height:80px;
+    border-radius:50%;
+    animation:floatUp 15s linear infinite;
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:60px;
+    background:white;
+    left:50%;
+    top:80px;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+/* Confetti */
+.confetti{
+    width:10px;
+    height:10px;
+    position:fixed;
+    top:-10px;
+    animation:jatuh 4s linear forwards;
+}
+
+@keyframes jatuh{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
